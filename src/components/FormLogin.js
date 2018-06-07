@@ -4,6 +4,8 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'rea
 
 export default class FormLogin extends React.Component {
 
+    static navigationOptions = {header: null };
+
     render() {
         return (
             <View style={styles.mainView}>
@@ -23,6 +25,9 @@ export default class FormLogin extends React.Component {
                         <Text style={styles.textButtonStyle}>ACESSAR</Text>
                     </TouchableOpacity>
                 </View>
+
+
+
 
             </View>
 
