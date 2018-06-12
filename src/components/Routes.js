@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
   Text,
   View
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import FormLogin from './src/components/FormLogin'
-import FormCadastro from './src/components/FormCadastro'
+import FormLogin from './FormLogin'
+import FormCadastro from './FormCadastro'
 
 
 
@@ -20,12 +18,11 @@ const RootStack = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
-  },
-  
+  }
 );
 
 
-export default class App extends Component {
+export default class Routes extends Component {
   
   render() { 
     

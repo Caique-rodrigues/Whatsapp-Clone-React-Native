@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'rea
 
 export default class FormLogin extends React.Component {
 
-    static navigationOptions = {header: null };
+    static navigationOptions = { header: null };
 
     render() {
         return (
@@ -17,7 +17,16 @@ export default class FormLogin extends React.Component {
                 <View style={styles.secondView} >
                     <TextInput placeholder='E-mail' style={styles.textInputStyle1} />
                     <TextInput placeholder='Senha' style={styles.textInputStyle1} />
-                    <Text style={styles.textSignIn}>Ainda não tem cadastro?  Cadastre-se</Text>
+
+
+                    <View style={styles.message}>
+                        <Text style={styles.textSignIn}>Ainda não tem cadastro?</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Cadastro')}>
+                            <Text style={{ marginLeft: 8, fontSize: 20, color: '#115e54' }}>Cadastre-se</Text>
+                        </TouchableOpacity>
+                    </View>
+
+
                 </View>
 
                 <View style={styles.thirdView} >
@@ -76,8 +85,10 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 14,
         fontWeight: 'bold'
+    },
+    message: {
+        flexDirection: 'row'
     }
-
 
 
 })
